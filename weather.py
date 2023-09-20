@@ -3,7 +3,9 @@ from dotenv import load_dotenv
 import os
 from pprint import pprint  # make json easier to read
 
+
 load_dotenv()
+
 
 def get_current_weather(city="New York"):
      
