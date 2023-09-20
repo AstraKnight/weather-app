@@ -14,7 +14,6 @@ def get_current_weather(city="New York"):
     return weather_data
 
 
-
 # when the file is called directly
 if __name__ == "__main__":
     print(f'\n*** Get Current Weather Conditions ***\n')
