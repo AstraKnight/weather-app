@@ -10,13 +10,56 @@
 
 <body>
     <h1>International Weather Forecast</h1>
-    <h2>{{ title }} Weather</h2>
-    <p>{{ status }} and {{ temperature }} &deg;C</p>
-    <p>Feels like {{ feels_like }} &deg;C</p>
 
     <form action="/weather">
         <input type="text" name="city" id="city" placeholder="Enter a City">
         <button type="submit">Submit</button>
     </form>
+
+    
+    <table>
+        <thead>
+            <tr>
+              <th colspan="2">{{ title }} Weather</th>
+            </tr>
+          </thead>
+
+        <tbody>
+            <tr class="highlighted-row">
+                <td>Weather Description</td>
+                <td>{{ status }}</td>  
+            </tr>
+            <tr>
+                <td>Temperature</td>
+                <td>{{ temperature }} &deg;C</td>  
+            </tr>
+            <tr  class="highlighted-row">
+                <td>Min. Temperature</td>
+                <td>{{ temp_min }} &deg;C</td>  
+            </tr>
+            <tr>
+                <td>Max. Temperature</td>
+                <td>{{ temp_max }} &deg;C</td>  
+            </tr>
+            <tr class="highlighted-row">
+                <td>Feels like</td>
+                <td>{{ feels_like }} &deg;C</td>  
+            </tr>
+            <tr>
+                <td>Humidity</td>
+                <td>{{ humidity }} %</td>  
+            </tr>
+         </tbody>
+    </table>
+
+    
+    <!-- <p>Weather Description {{ status }}</p>
+    <p>Temperature {{ temperature }} &deg;C</p>
+    <p>Min Temp {{ temp_min }} &deg;C</p>
+    <p>Max Temp {{ temp_max }} &deg;C</p>
+    <p>Feels like {{ feels_like }} &deg;C</p>
+    <p>Humidity {{ humidity }} %</p> -->
+
+
 </body>
 </html>

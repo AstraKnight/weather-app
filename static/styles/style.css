@@ -28,3 +28,17 @@ input, button {
     background-color: rgb(202, 248, 233);
     color:rgb(39, 33, 203);
 }
+
+td {
+    padding: 0.5em;
+}
+
+th {
+    font-size: larger;
+    padding: 0.5em;
+}
+
+
+.highlighted-row {
+    background-color: rgb(29, 224, 228);
+}

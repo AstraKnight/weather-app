@@ -26,7 +26,7 @@ def get_weather():
 
     # get weather data from the API
     weather_data = get_current_weather(city)
-
+    
     # city is not found by API
     if not weather_data['cod'] == 200:
         return render_template("city-not-found.html")
@@ -36,8 +36,12 @@ def get_weather():
     title=weather_data["name"],
     status=weather_data["weather"][0]["description"].capitalize(),
     temperature=f"{weather_data['main']['temp']:.1f}",
+    temp_min=f"{weather_data['main']['temp_min']:.1f}",
+    temp_max=f"{weather_data['main']['temp_max']:.1f}",
+    humidity=f"{weather_data['main']['humidity']}",
     feels_like=f"{weather_data['main']['feels_like']:.1f}"
     )
+
 
 
 # Starting the server (go to localhost:8000 to see the page)
